@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Neucha&family=Ponomar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Unicase', serif;
+  background-color: transparent; /* убрал чёрный фон */
+  background-image: url('https://sun9-37.userapi.com/s/v1/if2/I7H1AJ614u3GB8YPCtvJFSP29UA0KclJ5jef8AAcQuN6oqscdyyDdbmMBfWKrCZcShcL4nq2DtOL_q7nK7EzBvAH.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #d2c9df;
+  min-height: 100vh;
+}
+
+/* убираем затемнение подложки */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: transparent; /* убрал чёрный слой */
+  z-index: -1;
+}
+
+header {
+  background-color: transparent; /* убрал фон */
+  padding: 50px 20px;
+  text-align: center;
+  box-shadow: none;
+  border-bottom: none;
+}
+header h1 {
+  font-size: 4em;
+  font-family: 'Cormorant Unicase', cursive;
+  color: #ffffff;
+  text-shadow: none;
+  margin: 0;
+}
+
+nav {
+  margin-top: 20px;
+}
+nav a {
+  color: #e6dfff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: rgba(3, 22, 11, 0.4); /* можно оставить чуть затемнённый фон для читаемости */
+  border: 1px solid #00ff84;
+  transition: 0.3s ease;
+}
+nav a:hover,
+nav a.active {
+  background-color: #00ff84;
+  color: #000000;
+  box-shadow: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: transparent; /* убрал фон */
+  border: none;
+  border-radius: 12px;
+  box-shadow: none;
+}
+main h2 {
+  font-size: 2em;
+  color: #ffffff;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  font-family: 'Cormorant Unicase', cursive;
+}
+
+/* Стили для страницы РЕГИОНОВ */
+body.regions-page main {
+  background-color: transparent;
+}
+body.regions-page ul {
+  list-style: disc;
+  padding-left: 30px;
+}
+body.regions-page li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  color: #d2c9df !important;
+}
+body.regions-page main a {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+body.regions-page main a:hover {
+  color: #00ff84;
+  text-shadow: 0 0 5px #00ff84;
+}
+
+/* Стили карточек персонажей */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.character-card-mini {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.85); /* оставляем тёмный фон и рамку */
+  border: 1px solid #00ff84;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  box-shadow: 0 0 20px #00ff84;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.character-card-mini:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px #00ff84;
+}
+.character-card-mini img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #00ff84;
+}
+.character-card-mini .info {
+  padding: 15px;
+}
+.character-card-mini .info h3 {
+  font-size: 1.5em;
+  color: #00ff84;
+  margin: 0 0 10px 0;
+  font-family: 'Cormorant Unicase', serif;
+}
+.character-card-mini .info p {
+  font-size: 1em;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  max-height: 80vh;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #00ff84;
+  border-radius: 12px;
+  box-shadow: 0 0 40px #00d37b;
+  overflow-y: auto;
+}
+
+.character-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ff84;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.character-info {
+  text-align: center;
+  max-height: calc(80vh - 350px);
+  overflow-y: auto;
+  color: #d2c9df;
+}
+
+.character-info h2 {
+  font-size: 2em;
+  color: #00ff84;
+  margin-bottom: 20px;
+  font-family: 'Cormorant Unicase', serif;
+}
+
+.character-info p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: transparent; /* убрал фон */
+  padding: 30px;
+  text-align: center;
+  color: #888;
+  border-top: none;
+}
+
+/* Кнопка "Назад" */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00ff84;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid #00ff84;
+  transition: background-color 0.3s ease;
+}
+.back-button:hover {
+  background-color: #00d37b;
+}
+.banner {
+  width: 100%;
+  max-width: 1200px; /* максимум по ширине, чтобы не растягивался */
+  height: 500px; /* просто меняй это значение */
+  margin: 0 auto 40px auto;
+  background-image: url('https://media.tenor.com/8Cdx8fRXcUwAAAAM/cat-%D0%BA%D0%BE%D1%88%D0%BA%D0%B0.gif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  border: 2px solid #00ff84;
+  box-shadow: 0 0 20px #00ff84;
+  transition: height 0.3s ease;
+}
+
